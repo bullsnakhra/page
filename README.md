@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     :root {
-      --green: #0c4b3b;
-      --gold: #c79b28;
-      --dark: #1f2730;
-      --light: #e8f0df; /* soft greenish-light background */
-      --card: #f8f5eb;
-      --accent: #c06070;
+      --green: #00b894;      /* bright teal-green accent */
+      --gold: #f9ca24;       /* rich warm gold */
+      --dark: #ecf0f1;       /* light text on dark bg */
+      --bg-dark: #0b1720;    /* classy deep blue-teal */
+      --card: #111f2b;       /* slightly lighter card background */
+      --accent: #e17055;     /* coral accent */
       --max-width: 1100px;
       --radius: 10px;
     }
@@ -23,7 +23,7 @@
 
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--light);
+      background: radial-gradient(circle at top, #122230, var(--bg-dark));
       color: var(--dark);
       line-height: 1.6;
     }
@@ -34,11 +34,12 @@
     }
 
     header {
-      background: #ffffff;
-      border-bottom: 1px solid rgba(0,0,0,0.08);
+      background: rgba(7, 14, 22, 0.92);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
       position: sticky;
       top: 0;
       z-index: 100;
+      backdrop-filter: blur(10px);
     }
 
     .nav {
@@ -63,7 +64,7 @@
 
     .logo span {
       background: var(--green);
-      color: #ffffff;
+      color: #0b1720;
       padding: 0.15rem 0.35rem;
       border-radius: 999px;
       font-size: 0.7rem;
@@ -108,7 +109,7 @@
       font-size: 2.3rem;
       line-height: 1.1;
       margin-bottom: 1rem;
-      color: #1b242c;
+      color: #ffffff;
     }
 
     .hero h1 span {
@@ -117,7 +118,7 @@
 
     .hero-text {
       font-size: 0.95rem;
-      opacity: 0.95;
+      opacity: 0.9;
       margin-bottom: 1.5rem;
     }
 
@@ -145,23 +146,23 @@
 
     .btn-primary {
       background: var(--green);
-      color: #ffffff;
-      box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+      color: #0b1720;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.4);
     }
 
     .btn-primary:hover {
       transform: translateY(-1px);
-      box-shadow: 0 10px 22px rgba(0,0,0,0.22);
+      box-shadow: 0 10px 22px rgba(0,0,0,0.5);
     }
 
     .btn-outline {
       background: transparent;
-      border: 1px solid rgba(0,0,0,0.18);
+      border: 1px solid rgba(255,255,255,0.35);
       color: var(--dark);
     }
 
     .btn-outline:hover {
-      background: rgba(0,0,0,0.03);
+      background: rgba(255,255,255,0.06);
     }
 
     .hero-meta {
@@ -182,19 +183,19 @@
       background: var(--card);
       border-radius: var(--radius);
       padding: 1.4rem 1.6rem;
-      border: 1px solid rgba(0,0,0,0.06);
-      box-shadow: 0 16px 30px rgba(0,0,0,0.06);
+      border: 1px solid rgba(255,255,255,0.06);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.6);
     }
 
     .hero-card h2 {
       font-size: 1.05rem;
       margin-bottom: 0.7rem;
-      color: #222b34;
+      color: #ffffff;
     }
 
     .hero-card p {
       font-size: 0.85rem;
-      opacity: 0.95;
+      opacity: 0.9;
       margin-bottom: 0.8rem;
     }
 
@@ -209,24 +210,25 @@
       font-size: 0.75rem;
       padding: 0.25rem 0.6rem;
       border-radius: 999px;
-      border: 1px solid rgba(0,0,0,0.14);
-      opacity: 0.9;
-      background: #f1ecdf;
+      border: 1px solid rgba(255,255,255,0.14);
+      opacity: 0.95;
+      background: rgba(15, 32, 46, 0.9);
     }
 
     main {
-      background: var(--light);
+      background: radial-gradient(circle at top, #122230, var(--bg-dark));
     }
 
     section {
       max-width: var(--max-width);
       margin: 0 auto;
       padding: 2rem 1.25rem;
-      border-top: 1px solid rgba(0,0,0,0.04);
+      border-top: 1px solid rgba(255,255,255,0.06);
     }
 
     section:nth-of-type(odd) {
-      background: #f3efe5;
+      background: rgba(10, 25, 38, 0.9);
+      border-radius: 18px;
     }
 
     .section-header {
@@ -236,7 +238,7 @@
     .section-header h2 {
       font-size: 1.35rem;
       margin-bottom: 0.25rem;
-      color: #1f2730;
+      color: #ffffff;
     }
 
     .section-header p {
@@ -265,18 +267,18 @@
     }
 
     .stat {
-      background: #ffffff;
+      background: #101f2b;
       border-radius: var(--radius);
       padding: 0.7rem 0.8rem;
-      border: 1px solid rgba(0,0,0,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
       text-align: left;
-      box-shadow: 0 6px 14px rgba(0,0,0,0.04);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.4);
     }
 
     .stat-number {
       font-size: 1rem;
       font-weight: 700;
-      color: var(--green);
+      color: var(--gold);
     }
 
     .stat-label {
@@ -305,23 +307,23 @@
     }
 
     .card {
-      background: #ffffff;
+      background: #101f2b;
       border-radius: var(--radius);
-      border: 1px solid rgba(0,0,0,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
       padding: 0.9rem;
       font-size: 0.85rem;
-      box-shadow: 0 8px 18px rgba(0,0,0,0.04);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.4);
     }
 
     .card h3 {
       font-size: 0.95rem;
       margin-bottom: 0.4rem;
-      color: #232b34;
+      color: #ffffff;
     }
 
     .card p {
       font-size: 0.82rem;
-      opacity: 0.94;
+      opacity: 0.92;
     }
 
     .highlight {
@@ -330,11 +332,11 @@
     }
 
     .callout {
-      background: #f1ecdf;
+      background: #111f2b;
       border-radius: var(--radius);
       padding: 1rem;
       font-size: 0.85rem;
-      border: 1px solid rgba(0,0,0,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
     }
 
     .callout strong {
@@ -351,7 +353,7 @@
       justify-content: space-between;
       gap: 0.75rem;
       opacity: 0.8;
-      color: #444b52;
+      color: #d0d6dc;
     }
 
     .footer a {
@@ -514,7 +516,7 @@
       </div>
       <div class="grid-3">
         <div class="card">
-          <h3>Community & Belongings</h3>
+          <h3>Community & Belonging</h3>
           <p>
             Rehearsals are as much about connection as they are about choreography. We invest in bonding, mentorship, and
             a team culture where everyone feels seen, valued, and supported.
