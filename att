@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -7,9 +8,10 @@
     :root {
       --green: #00b894;      /* bright teal-green accent */
       --gold: #f9ca24;       /* rich warm gold */
-      --dark: #ecf0f1;       /* light text on dark bg */
-      --bg-dark: #0b1720;    /* classy deep blue-teal */
-      --card: #111f2b;       /* slightly lighter card background */
+      --text-main: #ecf0f1;  /* light text on dark bg */
+      --bg-dark: #050b10;    /* deeper, classy near-navy background */
+      --bg-soft: #091521;    /* slightly lighter panels */
+      --card: #0f1f2b;       /* card background */
       --accent: #e17055;     /* coral accent */
       --max-width: 1100px;
       --radius: 10px;
@@ -21,10 +23,12 @@
       padding: 0;
     }
 
+    /* System / Inter-style stack */
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #122230, var(--bg-dark));
-      color: var(--dark);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        "Inter", Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(circle at top, #0f1c29, var(--bg-dark));
+      color: var(--text-main);
       line-height: 1.6;
     }
 
@@ -34,7 +38,7 @@
     }
 
     header {
-      background: rgba(7, 14, 22, 0.92);
+      background: rgba(3, 8, 13, 0.92);
       border-bottom: 1px solid rgba(255,255,255,0.08);
       position: sticky;
       top: 0;
@@ -59,12 +63,12 @@
       display: flex;
       align-items: center;
       gap: 0.4rem;
-      color: var(--dark);
+      color: var(--text-main);
     }
 
     .logo span {
       background: var(--green);
-      color: #0b1720;
+      color: #041017;
       padding: 0.15rem 0.35rem;
       border-radius: 999px;
       font-size: 0.7rem;
@@ -146,19 +150,19 @@
 
     .btn-primary {
       background: var(--green);
-      color: #0b1720;
-      box-shadow: 0 8px 18px rgba(0,0,0,0.4);
+      color: #041017;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.5);
     }
 
     .btn-primary:hover {
       transform: translateY(-1px);
-      box-shadow: 0 10px 22px rgba(0,0,0,0.5);
+      box-shadow: 0 10px 22px rgba(0,0,0,0.6);
     }
 
     .btn-outline {
       background: transparent;
       border: 1px solid rgba(255,255,255,0.35);
-      color: var(--dark);
+      color: var(--text-main);
     }
 
     .btn-outline:hover {
@@ -183,8 +187,8 @@
       background: var(--card);
       border-radius: var(--radius);
       padding: 1.4rem 1.6rem;
-      border: 1px solid rgba(255,255,255,0.06);
-      box-shadow: 0 18px 40px rgba(0,0,0,0.6);
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.7);
     }
 
     .hero-card h2 {
@@ -210,13 +214,13 @@
       font-size: 0.75rem;
       padding: 0.25rem 0.6rem;
       border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.18);
       opacity: 0.95;
-      background: rgba(15, 32, 46, 0.9);
+      background: rgba(12, 31, 43, 0.96);
     }
 
     main {
-      background: radial-gradient(circle at top, #122230, var(--bg-dark));
+      background: radial-gradient(circle at top, #0f1c29, var(--bg-dark));
     }
 
     section {
@@ -227,7 +231,7 @@
     }
 
     section:nth-of-type(odd) {
-      background: rgba(10, 25, 38, 0.9);
+      background: rgba(9, 21, 33, 0.9);
       border-radius: 18px;
     }
 
@@ -267,12 +271,12 @@
     }
 
     .stat {
-      background: #101f2b;
+      background: #0f1f2b;
       border-radius: var(--radius);
       padding: 0.7rem 0.8rem;
       border: 1px solid rgba(255,255,255,0.08);
       text-align: left;
-      box-shadow: 0 6px 14px rgba(0,0,0,0.4);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.5);
     }
 
     .stat-number {
@@ -307,12 +311,12 @@
     }
 
     .card {
-      background: #101f2b;
+      background: #0f1f2b;
       border-radius: var(--radius);
       border: 1px solid rgba(255,255,255,0.08);
       padding: 0.9rem;
       font-size: 0.85rem;
-      box-shadow: 0 8px 18px rgba(0,0,0,0.4);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.5);
     }
 
     .card h3 {
@@ -332,7 +336,7 @@
     }
 
     .callout {
-      background: #111f2b;
+      background: #0f1f2b;
       border-radius: var(--radius);
       padding: 1rem;
       font-size: 0.85rem;
